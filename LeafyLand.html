@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leafy Land</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body{font-family:'Fredoka',sans-serif;background:#fff7b8;margin:0;color:#444}
+header{text-align:center;padding:40px 20px}
+.title{font-size:clamp(3rem,8vw,5rem);font-weight:600}
+.title span{display:inline-block;animation:bob 3s ease-in-out infinite}
+.title span:nth-child(1){color:#ff8fb1}.title span:nth-child(2){color:#ffbe76;animation-delay:.2s}
+.title span:nth-child(3){color:#ffe66d;animation-delay:.4s}.title span:nth-child(4){color:#7bed9f;animation-delay:.6s}
+.title span:nth-child(5){color:#70a1ff;animation-delay:.8s}.title span:nth-child(7){color:#a29bfe;animation-delay:1s}
+.title span:nth-child(8){color:#ff9ff3;animation-delay:1.2s}.title span:nth-child(9){color:#55efc4;animation-delay:1.4s}
+.title span:nth-child(10){color:#ff7675;animation-delay:1.6s}
+@keyframes bob{50%{transform:translateY(-12px)}}
+nav{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;padding:10px 20px}
+button{border:none;border-radius:999px;padding:12px 20px;background:#fff;cursor:pointer;box-shadow:0 4px 10px rgba(0,0,0,.08);font-family:inherit}
+button:hover{transform:scale(1.08)}
+.page{display:none;max-width:900px;margin:auto;padding:20px}
+.active{display:block}
+.card{background:#fff;border-radius:24px;padding:24px;box-shadow:0 6px 15px rgba(0,0,0,.08)}
+footer{text-align:center;padding:30px;color:#666}
+a{color:#4a72ff}
+</style>
+</head>
+<body>
+<header>
+<div class="title">
+<span>L</span><span>e</span><span>a</span><span>f</span><span>y</span><span>&nbsp;</span><span>L</span><span>a</span><span>n</span><span>d</span>
+</div>
+<p>🌿 Welcome to Leafy Land! This is my little corner of the internet where I share my hobbies, thoughts, music interests, and Scratch projects.</p>
+</header>
+
+<nav>
+<button onclick="showPage('about')">👤 About Me</button>
+<button onclick="showPage('scratch')">🖥️ Scratch</button>
+<button onclick="showPage('thoughts')">🚀 My Space Thoughts</button>
+<button onclick="showPage('music')">🎵 Music</button>
+<button onclick="showPage('other')">📦 Other</button>
+</nav>
+
+<section id="about" class="page active"><div class="card">
+<h2>👤 About Me</h2>
+<p>Heeeyyyyy! You can call me Leafy!! Here are some of my hobbies/things I like to do:</p>
+<ul>
+<li>🏃 Long-distance running</li>
+<li>🎸 Guitar</li>
+<li>🎨 Digital painting</li>
+<li>🖥️ Scratch!!</li>
+<li>👽 Astrobiology</li>
+</ul>
+</div></section>
+
+<section id="scratch" class="page"><div class="card">
+<h2>🖥️ Scratch</h2>
+<p>I have a Scratch account! Visit me at <a href="https://scratch.mit.edu/users/10101Scratcher/" target="_blank">@10101Scratcher</a>.</p>
+<p>On Scratch, I make animations, art, games, and pretty much anything!</p>
+<p>I'm an SMP Member (as of 6/16/2026).</p>
+<p>Feel free to say hi on my profile!</p>
+</div></section>
+
+<section id="thoughts" class="page"><div class="card">
+<h2>🚀 My Space Thoughts</h2>
+<p>👽 There are billions of galaxies with billions of stars and planets in our universe. It's almost impossible that we're the only planet with life on it.</p>
+<p>After all, the term "alien" can mean any type of life, not just the weird green guys with the buggy eyes lol.</p>
+<p>🌌 There is an organism on Earth called a Tardigrade (also known as a Water Bear or Moss Piglet) that can survive extreme conditions, including the vacuum of space.</p>
+<p>🛸 If there's an organism like the tardigrade, surely there must be life out there somewhere!</p>
+</div></section>
+
+<section id="music" class="page"><div class="card">
+<h2>🎵 Music</h2>
+<p>I play the acoustic guitar! 🎸</p>
+<p>I'm learning lead playing, although I do know some chords. I started in May 2025, so as of June 2026 I've been playing for about a year!</p>
+<p>I also really like listening to music (especially while doing chores). 😆</p>
+<p>My music taste is pretty random — I like K-pop and 80's music.</p>
+<p>My favorite K-pop group is BLACKPINK and I'm OT4. I also really like BABYMONSTER, IVE, and aespa.</p>
+</div></section>
+
+<section id="other" class="page"><div class="card">
+<h2>📦 Other</h2>
+<p>This website used ChatGPT to be made.</p>
+<p>ChatGPT provided the code and helped with the text.</p>
+</div></section>
+
+<footer>© 2026 Leafy Land 🍃</footer>
+
+<script>
+function showPage(id){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+</script>
+</body>
+</html>
